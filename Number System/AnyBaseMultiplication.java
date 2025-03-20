@@ -27,7 +27,7 @@ public class AnyBaseMultiplication {
             int d = num2 % 10;
             num2 /= 10;
             int singleProd = getSingleProduct(base, num1, d);
-            ans += AnyBaseAdd(base, ans, singleProd);
+            ans = AnyBaseAdd(ans,singleProd*power,base);
             power *= 10;
         }
         System.out.println("Sum is: " + ans);
